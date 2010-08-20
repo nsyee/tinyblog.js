@@ -4,6 +4,15 @@ A simple blog tool written with [Node.js](http://github.com/ry/node).
 ## Requirements
 see .ndistro file.
 
+## Installation
+
+	$cd /usr/local/bin && curl http://github.com/visionmedia/ndistro/raw/master/install | sh
+	$cd path_to_dir
+	$git clone git@github.com:nsyee/tinyblog.js.git
+	$cd tinyblog.js
+	$ndistro
+	$node app/app.js
+
 ## LICENSE:
 
 (The MIT License)
