@@ -2,6 +2,6 @@
 
 <p>半年くらい放置してたこのブログ。今までRackspaceで運用してましたが、こっそり<a href="http://dream.jp/vps/index.html" target="_blank">ServersMan@VPS</a>のStandardプランに移行しました。国内の業者なので回線も近く値段も格安で今のところ満足して使えてます。</p>
 <p>さらにHaskellで自作していたブログシステムもこの半年間の興味の変化により、サーバサイドJavaScriptの処理系の最先鋒である<a href="http://nodejs.org/" target="_blank">Node.js</a>でリライトしてます。</p>
-<p>まだNode.jsならではの機能はまったく組んでないですが、<a href="http://github.com/nsyee/tinyblog.js" target="_blank">github</a>に丸ごとアップしてるので興味のある方は見てみると参考にはなるかもしれないです。</p>
+<p>まだNode.jsならではの機能はまったく組んでないですが、<a href="http://github.com/nsyee/tinyblog.js" target="_blank">github</a>に丸ごとアップしてるので興味のある人は参考になる部分もあるかもしれないです。</p>
 <p>Node.jsコミュニティは開発が活発で今年に入って急速にモジュールの充実や完成度が高まってきているので、ウォッチしているととても楽しいです。これからしばらくNode.js周りの話題を取り上げていきたいなと思ってます。</p>
 </p>
