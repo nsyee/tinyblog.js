@@ -1,7 +1,7 @@
 # tinyblog.js
-A simple blog tool written with Node.js.
+A simple blog tool written with [Node.js](http://github.com/ry/node).
 
-** requirements
+## Requirements
 see .ndistro file.
 
 ## LICENSE:
