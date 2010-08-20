@@ -114,7 +114,7 @@ h1 a {
     position: relative;
     font-size:12px;
     margin-bottom: 50px;
-    padding-right: 40px;
+    padding-right: 50px;
     text-decoration: none;
 }
 
@@ -215,14 +215,14 @@ h1 a {
 
 #content #menu {
     position: absolute;
-    right: -170px;
+    right: -190px;
     width: 200px;
     text-align: left;
 }
 
 #menu {
-    width: 275px;
-    margin-left:10px;
+    width: 280px;
+    margin-left:20px;
     margin-top:20px;
     font: Normal 20px Helvetica,sans-serif;
     color: #BBBBBB;
