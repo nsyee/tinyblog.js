@@ -1,0 +1,323 @@
+/************* reset.css *************/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+table, td, th { vertical-align: middle; }
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+/* Remove annoying border on linked images. */
+a img { border: none; }
+
+/************* /reset.css *************/
+
+body {
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: #fff;
+    font-family: 'Helvetica, Ariel', sans-serif;
+}
+
+a {
+    color: #FCB310;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+img {
+    border: medium none;
+}
+
+.hidden {
+    display: none;
+}
+
+.arrow {
+    color: #993333;
+    outline-width: medium;
+}
+
+h1 {
+   color: #333333;
+   padding: 0;
+   text-size: 100px;
+}
+
+h1 a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.header {
+    font-family: helvetica sans-serif;
+    margin: 25px 0 50px 0; 
+    width: 100%; 
+}
+
+.header h1 {
+    line-height:56px;
+    font-size:60px;
+    font-weight:100;
+    letter-spacing:-2px;
+    text-transform:uppercase;
+    text-align: center;
+}
+.header h1 a {
+    font-weight:normal;
+    border:0 !important;
+    text-decoration: none;
+}
+
+.header h2 {
+    color:#BBBBBB;
+    font-size:16px;
+    font-weight:100;
+    letter-spacing:-1px;
+    line-height:22px;
+    text-align:center;
+    margin-top:10px;
+    margin-right:55px;
+}
+
+#content {
+    width: 520px;
+    margin: auto;
+    position: relative;
+}
+
+#disqus_thread {
+    margin-top: 100px;
+}
+
+.entry {
+    position: relative;
+    font-size:12px;
+    margin-bottom: 50px;
+    padding-right: 40px;
+    text-decoration: none;
+}
+
+.entry span.datetime {
+     font-size: 12px;
+     line-height: 150%;
+     color: #555;
+     padding: 25px 25px 45px 0;
+     text-align: left;
+}
+
+.entry p {
+     margin-top: 10px;
+}
+
+.entry img.permalink {
+    width: 38px;
+    height: 32px;
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    right: 560px;
+    top: 0px;
+    z-index: 10;
+    text-decoration: none;
+    opacity: 0.4;
+}
+
+.entry:hover img.permalink {
+    display: inline;
+    text-decoration: none;
+    background-color: #fff;
+    opacity: 0.99;
+}
+
+.entry h2 {
+    font-size: 32px;
+    color: #B0C4DE;
+    letter-spacing: -1px;
+    margin: 0px 0px 5px 0px;
+    text-decoration: none;
+}
+
+.entry h2 a {
+    color: #B0C4DE;
+    text-decoration: none;
+    font-family: Helvetica Neue, sans-serif;
+    font-weight: 100;
+    text-align: left;
+}
+
+.entry h3 {
+    border-left: 4px solid #B0C4DE;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.entry .caption {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
+    padding: 0px 20px 0px 20px;
+    text-decoration: none;
+    border:none;
+}
+
+.entry .caption a {
+    color: #FCB310;
+    text-decoration: none;
+    border:none;
+}
+
+.entry .caption a:hover {
+    color: #FCB310;
+    text-decoration: underline;
+    border:none;
+}
+
+.entry ul {
+    line-height: 130%;
+    margin-left: 8px;
+    padding-left: 16px;
+}
+
+.entry ul.list1 {
+    list-style-type: disc;
+    margin-top: 10px;
+}
+
+.entry ul.list2 {
+    list-style-type: circle;
+}
+
+.entry ul.list3 {
+    list-style-type: square;
+}
+
+#content #menu {
+    position: absolute;
+    right: -170px;
+    width: 200px;
+    text-align: left;
+}
+
+#menu {
+    width: 275px;
+    margin-left:10px;
+    margin-top:20px;
+    font: Normal 20px Helvetica,sans-serif;
+    color: #BBBBBB;
+}
+
+#menu a {
+    color: #BBBBBB;
+    border:none;
+}
+
+#menu h3 {
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#about {
+    font-size: 10px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+#about dt {
+    float: left;
+    margin-right: 3px;
+}
+
+#gravatar {
+    margin-bottom: 5px;
+    border: 1px solid #CCCCCC;
+}
+
+#recent-entry {
+    margin-left: 30px;
+}
+
+#recent-entry ul {
+    list-style-type: none;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+#recent-entry ul li {
+    margin-bottom: 3px;
+}
+
+#other-platform {
+    margin-left: 30px;
+}
+
+#other-platform ul {
+    list-style-type: none;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+#other-platform ul li {
+    margin-bottom: 3px;
+}
+#other-platform ul li a {
+    color: #FCB310;
+}
+
+#nav {
+    margin: 0px 0px 10px 0px;
+    text-align: left;
+    font-weight: 100;
+    color: #BBBBBB;
+}
+
+#nav {
+    font-size: 12px;
+}
+
+#nav .prev {
+    float: left;
+}
+
+#nav .main {
+    margin: 0px 10px 0px 10px;
+    float: left;
+}
+
+#nav .next {
+    text-align: left;
+}
+
+
+#nav a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #BBBBBB;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}

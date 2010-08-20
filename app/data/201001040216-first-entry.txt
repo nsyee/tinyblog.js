@@ -1,0 +1,12 @@
+first entry
+
+<p>ブログを新しく始めます。</p>
+<p>主にHaskell/JavaScript/Erlang/Perlなどのプログラミング言語や、それらを用いたシステム開発などの技術的な話題を扱いますが、趣味の音楽などについても機会があれば書いていきたいと思います。</p>
+<p>ちなみにこのブログはこれの為にHaskellで自作したツールを使っていて、<a href="http://github.com/nsyee/tinyblog">githubで公開</a>しています。だって、特定の言語を愛しているのにPerlやPHPで作られたブログツールを使うなんて寂しいじゃないですか。今はまだ極々シンプルな機能しか無いですが順次アップデートしていく予定です。</p>
+<p>それでは更新を継続していけることを祈って。Here we go!</p>
+<br><br>
+<p>This is first entry on this blog.</p>
+<p>I will talk about programming languages mainly such as Haskell, Javascript,
+Erlang, Perl and so on. I'll also write about music I'm interested in.</p>
+<p>BTW, this blog tool was written with Haskell. I uploaded this to <a href="http://github.com/nsyee/tinyblog">github</a>. It was a quite a job for me. But still I want to use the one written with Haskell, not with Perl and PHP. Currently this tool only has simple functions. I will update this gradually.</p>
+<p>Then, I hope I continue updating this blog. Here we go!</p>

@@ -1,0 +1,24 @@
+ghc-asm trouble
+
+<p>twitterに書いたことを一応ここにもまとめときます。</p>
+
+<p>気がついたらcabal installが「ghc: could not execute: /opt/local/lib/ghc-6.10.4/./ghc-asm」というエラーを吐いて動かなくなっていた。何のことやら分からないまま「ghc-asm」をキーワードに調べたら似たような事例が。<a href="http://www.opensubscriber.com/message/haskell-cafe@haskell.org/10200003.html">Re: [Haskell-cafe] GHC trouble on Leopard]</a></p>
+
+<p>どうやらPerl絡みのメッセージらしい。そこでハタと気がついたのが、先日macportsのPerlのバージョンを5.8から5.10に変えたこと。</p>
+
+<p>ghc-asmを開いてみたら案の定以下のようなPerlスクリプトで、shebangに#!/opt/local/bin/perl5.8とバージョンがハードコードされてた(!)</p>
+
+<p>#!/opt/local/bin/perl5.10と書き換えただけで無事動くようになりました。ghc-asm周りでエラーが起きた場合はPerlが使える状態にあるか(大抵は大丈夫だろうけど)チェックしてみると良さそうです。</p>
+
+<pre class="brush:shell">
+#!/opt/local/bin/perl5.8
+$TARGETPLATFORM  = "i386-apple-darwin";
+
+</pre>
+
+<p>I met a trouble with "catal install" suddenly. it put out an error like, "ghc: could not execute: /opt/local/lib/ghc-6.10.4/./ghc-asm", and didn't work.</p>
+<p>Though I wasn't sure about this, I googled "ghc-asm". Then, I found a case just like mine. <a href="http://www.opensubscriber.com/message/haskell-cafe@haskell.org/10200003.html">Re: [Haskell-cafe] GHC trouble on Leopard]</a></p>
+<p>It looks like a trouble around Perl.</p>
+<p>Then, I noticed that I upgrated Perl on MacPorts from 5.8 to 5.10 some days ago.</p>
+<p>And sure enough, I got that ghc-asm is just a perl script, and written with shebang like "#!/opt/local/bin/perl5.8".</p>
+<p>Finally, cabal came to work with changing shebang from "perl5.8" to "perl5.10". hooray!</p>

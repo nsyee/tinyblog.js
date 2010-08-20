@@ -1,0 +1,73 @@
+ErlangをMacPortsからインストール on MacOSX
+
+<p>Erlang/OTPの2010/1/1時点の最新バージョンであるR13B03をOSX 1.5.8にインストールする。MacPortsにあるパッケージがしっかりと最新版に追従してくれているようなので、MacPortsを利用する。</p>
+<br>
+<pre class="brush:shell">
+%port info erlang
+erlang @R13B03 (lang, erlang)
+Variants:             darwin_10, nohipe, ssl, universal
+
+Description:          Erlang is a programming language designed at the Ericsson Computer Science Laboratory. Open-source Erlang is being released to help encourage the spread of
+                      Erlang outside Ericsson. We are releasing free of charge: The entire source code of the current Erlang system. Extensive libraries of code for building robust
+                      fault-tolerant distributed applications. All with documentation. All the above software has been battle tested in a number of Ericsson products, for example the
+                      new Ericsson ATM switch.
+Homepage:             http://www.erlang.org/
+
+Build Dependencies:   gawk, wxWidgets
+Runtime Dependencies: tk
+Platforms:            darwin
+License:              unknown
+Maintainers:          bfulgham@macports.org
+%
+%
+%sudo port install erlang
+...
+Error: The following dependencies failed to build: wxWidgets libsdl_mixer smpeg
+Error: Status 1 encountered during processing.
+</pre>
+<br>
+<p>どうやら依存パッケージのwxWidgets(が更に依存しているsmpeg)のビルドでエラーになる様子。</p>
+<br>
+<pre class="brush:shell">
+%sudo port install wxWidgets
+--->  Computing dependencies for wxWidgets
+--->  Building smpeg
+Error: Target org.macports.build returned: shell command " cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_rsync.macports.org_release_ports_multimedia_smpeg/work/smpeg-0.4.4" && /usr/bin/make all " returned error 2
+Command output:   "_SDL_PollEvent", referenced from:
+      _SDL_main in plaympeg.o
+  "_SDL_Delay", referenced from:
+      _SDL_main in plaympeg.o
+  "_SDL_Init", referenced from:
+      _SDL_main in plaympeg.o
+      _SDL_main in plaympeg.o
+  "_SDL_GetVideoInfo", referenced from:
+      _SDL_main in plaympeg.o
+  "_SDL_Quit", referenced from:
+      _SDL_main in plaympeg.o
+  "_SDL_QuitSubSystem", referenced from:
+      _SDL_main in plaympeg.o
+  "_SDL_AudioDriverName", referenced from:
+      _SDL_main in plaympeg.o
+  "_SDL_GetError", referenced from:
+      _SDL_main in plaympeg.o
+      _SDL_main in plaympeg.o
+      _SDL_main in plaympeg.o
+  "_SDL_SetVideoMode", referenced from:
+      _SDL_main in plaympeg.o
+      _SDL_main in plaympeg.o
+  "_SDL_ShowCursor", referenced from:
+      _SDL_main in plaympeg.o
+      _SDL_main in plaympeg.o
+ld: symbol(s) not found for architecture ppc
+collect2: ld returned 1 exit status
+lipo: can't open input file: /var/tmp//ccEtBSIk.out (No such file or directory)
+make[1]: *** [plaympeg] Error 1
+make: *** [all-recursive] Error 1
+
+</pre>
+
+<p>ググってみたところ、<a href="http://hirotak.exblog.jp/13249866/">このページ</a>の情報によるとMacPortsに登録されているwxWidgetsのバージョン2.8.9だとビルドに失敗するようだ。<a href="http://trac.macports.org/ticket/20952">Ticket #20952</a>にバージョン2.9.0のPortfileとpatch-textctrl.diffが添付されているので、それをダウンロードしてlocal portsとしてインストールする。自前で用意したPortfileのインストールの仕方は<a href="http://lapangan.net/darwinports/index.php?HowTo/LocalPortfile">このページを参照</a>。</p>
+
+<p>wxWidgets2.9.0が無事インストールできれば、再度sudo port install erlangすればこちらも成功するはず。</p>
+
+

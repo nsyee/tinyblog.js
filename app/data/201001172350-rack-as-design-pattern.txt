@@ -1,0 +1,19 @@
+Rack as a design pattern
+
+<p><a href="http://rack.rubyforge.org/">Rack</a> is a web server interface in Ruby. it provides specifications and a common interface between WAF(web application framework) and backend servers on which applications run.</p>
+<p>It is a very sophisticated structure (and culture) in web application development. And it causes that many WAF and middlewares have been developed actively.</p>
+
+<p>Then, many other languages have introduced the method of Rack quickly in this several months. As long as I know, there are a number of Rack clone already as follows:</p>
+
+<ul class="list1">
+<li><a href="http://www.wsgi.org/wsgi/">WSGI in Python</a> (this appears almost simultaneously with Rack)</li>
+<li><a href="http://plackperl.org/">PSGI/Plack in Perl</a></li>
+<li><a href="http://github.com/jimeh/php-rack">PHP Rack in PHP</a></li>
+<li><a href="http://jackjs.org/">JSGI/Jack in (server-side) JavaScript</a></li>
+<li><a href="http://github.com/nfjinjing/hack">Hack in Haskell</a></li>
+</ul>
+<p>It might exists in other languages. If you know, please comment below.</p>
+
+<p>As a result of these works, we can develop WAF and web applications with the same method, even if we choose any language. That's pretty good. We should appreciate all developers of these projects! I think we can already define Rack as a design pattern in web application development.</p>
+
+<p>And then, what's comming next? Following the unification of specifications, I hope we share implementations in the future:-) If it is possible to use middlewares and backend environment in different languages, it's very glad for us, isn't it? To achieve it, I guess languages need a common virtual machine based on LLVM or JVM etc. It seems hard currently...</p>

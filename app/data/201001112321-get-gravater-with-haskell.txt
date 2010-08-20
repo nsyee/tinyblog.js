@@ -1,0 +1,15 @@
+Getting Gravatar with Haskell
+
+<p><a href="http://ja.gravatar.com/">Gravatar</a>は、メールアドレスをkeyとしてどのサイトでも表示することができる共通のプロフィール画像を登録できるWebサービスです。</p>
+<p>例えば<a href="http://github.com/">GitHub</a>や<a href="http://search.cpan.org/">CPAN</a>のプロフィール画像に使われていますし、このブログでやっているように好きなサイトに貼りつけることもできます。</a><p>
+<p>で、貼りつけることができて便利、なんですが、いざやってみようと思うと<a href="http://ja.gravatar.com/site/implement">このページの手順</a>にある通りこれが意外にメンドくさい。メールアドレスのMD5 hex値をクエリパラメータに渡す必要があります。</p>
+<p>javascriptでMD5に変換するライブラリを用意するのは手間がかかるので、Haskellのcabalバッケージを探してみたら丁度いいのがありました。<a href="http://hackage.haskell.org/package/gravatar">gravatar</a>パッケージです。以下のような感じでメールアドレスをStringで渡すだけでGravatarに登録した画像のURIがStringで返ってきます。Haskellでは珍しく:)、非常にお手軽です。</p>
+
+<pre class="brush:hs">
+    import Network.Gravatar
+
+    -- | gravatar image
+    getGravatarImage :: Bool -> String -> String
+    getGravatarImage True email = gravatar email
+    getGravatarImage False _ = ""
+</pre>

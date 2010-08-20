@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title><%- metaTitle %></title>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss"/>
+<meta name="description" content="thoughts on functional languages stuff"/>
+<link rel="stylesheet" href="/css/base.css?2009011701" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/syntax/shCore.css?20090111" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/syntax/shThemeMidnight.css?20090111" type="text/css" media="screen">
+</head>
+<body>
+<div class="header">
+    <h1><a href="/"><img alt="logo image" src="/img/logo.png?20090111"/></a></h1>
+</div>
+<div id="content">
+    <div id="menu">
+        <div id="about">
+            <h3>about me <span class="arrow">&gt;&gt;</span></h3>
+            <p><img alt="profile image" src="<%- gravatar %>" id="gravatar"/></p>
+            <dl>
+                <dt>name:</dt><dd>西山雄也/Nishiyama Yuya</dd>
+                <dt></dt><dd>japanese, software engineer. lives in Tokyo, Japan. functional language lover. <br>I'm not afraid of being minority.</dd>
+            </dl>
+        </div>
+        <div id="recent-entry">
+            <h3>recent entries <span class="arrow">&gt;&gt;</span></h3>
+            <ul>
+                <%- partial('recent', recents) %>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div id="other-platform">
+            <ul>
+                <li><a href="http://twitter.com/nsyee">nsyee@twitter</a></li>
+                <li><a href="http://b.hatena.ne.jp/nsyee">nsyee@hatena</a></li>
+                <li><a href="http://github.com/nsyee">nsyee@github</a></li>
+                <li><a href="http://lang-8.com/107992">nsyee@lang-8</a></li>
+                <li><a href="http://mixi.jp/show_friend.pl?id=2472957">nsyee@mixi</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div id="nav">
+            <div class="prev">&nbsp;<% if (naviState.prev) { %><a href="<%- naviState.prev.url %>"><span class="arrow">&#171;</span>&nbsp;<%- naviState.prev.title %></a><% } %></div>
+            <div class="main">&nbsp;|&nbsp;<a href="/">Main</a>&nbsp;|&nbsp;</div>
+            <div class="next"><% if (naviState.next) { %><a href="<%- naviState.next.url %>"><%- naviState.next.title %></a>&nbsp;<span class="arrow">&#187;</span><% } %>&nbsp;</div>
+        </div>
+        <%- body %>
+    </div>
+</div>
+<script src="/js/jquery.js?20090111" type="text/javascript"></script>
+<script src="/js/pure.js?20090111" type="text/javascript"></script>
+<script src="/js/syntax/shCore.js?20090111" type="text/javascript"></script>
+<script src="/js/syntax/shBrushBash.js?20090111" type="text/javascript"></script>
+<script src="/js/syntax/shBrushHaskell.js?20090112" type="text/javascript"></script>
+<script src="/js/syntax/shBrushJScript.js?20090111" type="text/javascript"></script>
+<script src="/js/mv.js?20090111" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/anyproblems/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+</script>
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4682957-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript">
+    SyntaxHighlighter.all()
+</script>
+</body>
+</html>
