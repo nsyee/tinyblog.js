@@ -26,7 +26,7 @@
         <div id="recent-entry">
             <h3>recent entries <span class="arrow">&gt;&gt;</span></h3>
             <ul>
-                <%- partial('recent', recents) %>
+                <%- partial('partials/recent', recents) %>
                 <li><a href="#"></a></li>
             </ul>
         </div>
@@ -59,14 +59,14 @@
 <script type="text/javascript">
 //<![CDATA[
 (function() {
-	var links = document.getElementsByTagName('a');
-	var query = '?';
-	for(var i = 0; i < links.length; i++) {
-	if(links[i].href.indexOf('#disqus_thread') >= 0) {
-		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-	}
-	}
-	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/anyproblems/get_num_replies.js' + query + '"></' + 'script>');
+  var links = document.getElementsByTagName('a');
+  var query = '?';
+  for(var i = 0; i < links.length; i++) {
+  if(links[i].href.indexOf('#disqus_thread') >= 0) {
+    query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+  }
+  }
+  document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/anyproblems/get_num_replies.js' + query + '"></' + 'script>');
 
 })();
 //]]>
@@ -84,11 +84,11 @@ pageTracker._trackPageview();
     SyntaxHighlighter.all()
 </script>
 <script type="text/javascript">
-	(function(d,n){
-		var e =d.createElement(n),s=d.getElementsByTagName(n)[0];e.async=true;
-		e.src="//speedo.no.de/client.js#{'account':'4738453315821'}";
-		s.parentNode.insertBefore( e, s );
-	})(document,"script");
+  (function(d,n){
+    var e =d.createElement(n),s=d.getElementsByTagName(n)[0];e.async=true;
+    e.src="//speedo.no.de/client.js#{'account':'4738453315821'}";
+    s.parentNode.insertBefore( e, s );
+  })(document,"script");
 </script>
 </body>
 </html>

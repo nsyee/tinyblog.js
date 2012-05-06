@@ -1,0 +1,11 @@
+{
+    "name": "tinyblog.js"
+  , "version": "0.0.2"
+  , "private": false
+  , "dependencies": {
+      "connect": ">= 2.0"
+    , "connect-form": ">= 0.2"
+    , "express": ">= 2.5"
+    , "ejs": ">= 0.7"
+  }
+}
